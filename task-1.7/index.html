@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Carousel</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <main class="carousel">
+    <h1>React UI Libraries</h1>
+    <div class="slides">
+
+      <input type="radio" name="radio-buttons" id="img-1" checked />
+      <article class="slide">
+        <div class="slide__content">
+          <h3>Material UI</h3>
+          <p>MUI offers a comprehensive suite of UI tools to help you ship new features faster. Start with Material UI, our fully-loaded component library, or bring your own design system to our production-ready components.</p>
+        </div>
+        <div class="slide__image">
+          <img src="./images/material-ui.png" alt="material ui">
+        </div>
+        <div class="slide__controls">
+          <label for="img-3" class="prev-slide">
+            <span>&lsaquo;</span>
+          </label>
+          <label for="img-2" class="next-slide">
+            <span>&rsaquo;</span>
+          </label>
+        </div>
+      </article>
+
+      <input type="radio" name="radio-buttons" id="img-2" />
+      <article class="slide">
+        <div class="slide__content">
+          <h3>chakra</h3>
+          <p>Create accessible React apps with speed. Chakra UI is a simple, modular and accessible component library that gives you the building blocks you need to build your React applications.</p>
+        </div>
+        <div class="slide__image">
+          <img src="./images/chakra-ui.png" alt="chakra">
+        </div>
+        <div class="slide__controls">
+          <label for="img-1" class="prev-slide">
+            <span>&lsaquo;</span>
+          </label>
+          <label for="img-3" class="next-slide">
+            <span>&rsaquo;</span>
+          </label>
+        </div>
+      </article>
+
+      <input type="radio" name="radio-buttons" id="img-3" />
+      <article class="slide">
+        <div class="slide__content">
+          <h3>react-bootstrap</h3>
+          <p>Built with compatibility in mind, we embrace our bootstrap core and strive to be compatible with the world's largest UI ecosystem. React-Bootstrap works with the thousands of Bootstrap themes you already love.</p>
+        </div>
+        <div class="slide__image">
+          <img src="./images/react-bootstrap.png" alt="react-bootstrap">
+        </div>
+        <div class="slide__controls">
+          <label for="img-2" class="prev-slide">
+            <span>&lsaquo;</span>
+          </label>
+          <label for="img-1" class="next-slide">
+            <span>&rsaquo;</span>
+          </label>
+        </div>
+      </article>
+
+      <div class="carousel-dots">
+        <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
+        <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
+        <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
+      </div>
+
+    </div>
+  </main>
+</body>
+</html>

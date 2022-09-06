@@ -1,0 +1,32 @@
+.section {
+  height: 100vh;
+  background: url("images/winter.jpg") 0 0/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section_spring {
+  background-image: url("images/spring.jpg");
+}
+.section_summer {
+  background-image: url("images/summer.jpg");
+}
+.section_fall {
+  background-image: url("images/fall.jpg");
+}
+.section__h2 {
+  color: #fbfbfb;
+  font-size: 5rem;
+  text-shadow: 4px 4px 2px #000;
+}
+.section__h2_line {
+  text-decoration: underline;
+}
+
+@media (min-width: 800px) {
+  .section {
+    background-attachment: fixed;
+  }
+}
+
+/*# sourceMappingURL=variables.css.map */

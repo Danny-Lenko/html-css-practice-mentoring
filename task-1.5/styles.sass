@@ -1,0 +1,29 @@
+$bcg-winter: "images/winter.jpg"
+$bcg-spring: "images/spring.jpg"
+$bcg-summer: "images/summer.jpg"
+$bcg-fall: "images/fall.jpg"
+
+.section
+  height: 100vh
+  background: url($bcg-winter) 0 0/cover no-repeat
+  display: flex
+  align-items: center
+  justify-content: center
+
+  &_spring
+    background-image: url($bcg-spring)
+  &_summer
+    background-image: url($bcg-summer)
+  &_fall
+    background-image: url($bcg-fall)
+
+  &__h2
+    color: #fbfbfb
+    font-size: 5rem
+    text-shadow: 4px 4px 2px #000
+    &_line
+      text-decoration: underline
+
+@media(min-width: 800px)
+  .section
+    background-attachment: fixed

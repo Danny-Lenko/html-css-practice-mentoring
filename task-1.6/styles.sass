@@ -1,0 +1,57 @@
+body
+  font-family: sans-serif
+  display: grid
+  grid-template-columns: 200px 1fr
+  code
+    background-color: #ebebeb
+
+.sidebar
+  background-color: #ebebeb
+  border-right: 2px solid #bcbcbc
+  &__header
+    padding: 5px 0 5px 10px
+  &__h2
+    font-size: 1.2rem
+    text-transform: uppercase
+  &__ul
+    list-style-type: none
+    margin: 0
+    padding: 0
+    height: calc(100vh - 40px)
+    overflow-y: scroll
+  &__chapter
+    padding: 0.5rem 0 0.5rem 0.7rem
+    border-top: 1px solid #e7e7e7
+    > *
+      color: black
+      font-weight: bold
+      text-decoration: none
+
+.main
+  background-color: #fefefe
+  padding: 10px
+  height: 100vh
+  overflow-y: auto
+  &__article
+    margin: 1rem 0 1rem 0.5rem
+  &__h3
+    font-size: 1.3rem
+  &__description
+    margin: 5px 0 0 5px
+
+
+@media (max-width: 800px)
+  body
+    display: flex
+    flex-direction: column
+  .sidebar
+    border-right: none
+    border-bottom: 1px solid #ebebeb
+    text-align: center
+    position: sticky
+    top: 0
+    &__header
+      display: none
+    &__ul
+      direction: rtl
+      height: 30vh

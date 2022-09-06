@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+:root {
+  --gradient1: rgba(0,0,0,0.4);
+  --gradient2: rgba(0,0,0,0);
+  font-family: sans-serif;
+  line-height: 1;
+  text-shadow: 1px 1px 1px darkslategrey;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 0 0 1rem;
+}
+
+h3 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 2rem 0 0;
+}
+
+p {
+  font-size: 1.3rem;
+  text-shadow: none;
+  padding: 0 10rem;
+  margin: 0 0 1rem;
+}
+
+.carousel {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.slides {
+  display: block;
+  position: relative;
+  height: 450px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style: none;
+}
+
+input {
+  display: none;
+}
+
+.slide {
+  display: block;
+}
+
+.slide__content {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 999;
+  position: absolute;
+  bottom: 50px;
+  transition: all .7s ease-in-out;
+}
+
+.slide__image {
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0;
+  transition: all .7s ease-in-out;
+}
+
+.slide__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide__controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  font-size: 100px;
+  line-height: 450px;
+  color: #fff;
+}
+
+.slide__controls label {
+  display: none;
+  position: absolute;
+  padding: 0 20px;
+  opacity: 0;
+  transition: opacity .2s;
+  cursor: pointer;
+}
+
+.slide__image:hover + .slide__controls label,
+.slide__content:hover ~ .slide__controls label {
+  opacity: 0.5;
+}
+
+.slide__controls label:hover {
+  opacity: 1;
+}
+
+.slide__controls .prev-slide {
+  width: 20%;
+  text-align: left;
+  left: 0;
+  background: var(--gradient2);  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, var(--gradient2), var(--gradient1));  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, var(--gradient2), var(--gradient1)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.slide__controls .next-slide {
+  width: 20%;
+  text-align: right;
+  right: 0;
+  background: var(--gradient2);  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, var(--gradient2), var(--gradient1));  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, var(--gradient2), var(--gradient1)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.carousel-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  z-index: 999;
+  text-align: center;
+}
+
+.carousel-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  margin: 0 7px 5px;
+  cursor: pointer;
+}
+
+input:checked + .slide .slide__image,
+input:checked + .slide .slide__content{
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide .slide__controls label {
+  display: block;
+}
+
+input#img-1:checked ~ .carousel-dots label#img-dot-1,
+input#img-2:checked ~ .carousel-dots label#img-dot-2,
+input#img-3:checked ~ .carousel-dots label#img-dot-3,
+input#img-4:checked ~ .carousel-dots label#img-dot-4,
+input#img-5:checked ~ .carousel-dots label#img-dot-5,
+input#img-6:checked ~ .carousel-dots label#img-dot-6 {
+  background-color: #000;
+}
